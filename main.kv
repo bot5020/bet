@@ -1,0 +1,105 @@
+#:kivy 2.1.0
+
+<MainPage>
+    # Left Menu
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: 0.4, 1
+        padding: 20, 7, 20, 20
+        
+        canvas:
+            Color:
+                rgba: 255 / 255, 255 / 255, 255 / 255, 1
+            Rectangle:
+                size: self.size
+        Label:
+
+            markup: True
+            text: '[u][b]Information[/b][/u]'
+            color: 0 / 255, 106 / 255, 193 / 255, 1
+            font_size: 30
+        Label:
+
+            markup: True
+            text: '[u][b]Name[/b][/u]'
+            color: 38 / 255, 115 / 255, 236 / 255, 1
+            font_size: 30
+        Label:
+            id: name
+            color: 25 / 255, 153 / 255, 0 / 255, 1
+            font_size: 26
+        Label:
+            markup: True
+            text: '[u][b]Surname[/b][/u]'
+            color: 38 / 255, 115 / 255, 236 / 255, 1
+            font_size: 30
+        Label:
+            id: surname
+            color: 25 / 255, 153 / 255, 0 / 255, 1
+            font_size: 26
+        Label:
+            markup: True
+            text: '[u][b]Patronymic[/b][/u]'
+            color: 38 / 255, 115 / 255, 236 / 255, 1
+            font_size: 30
+        Label:
+            id: patronymic
+            color: 25 / 255, 153 / 255, 0 / 255, 1
+            font_size: 26
+        Label:
+            markup: True
+            text: '[u][b]Phone number[/b][/u]'
+            color: 38 / 255, 115 / 255, 236 / 255, 1
+            font_size: 30
+        Label:
+            id: phone
+            color: 25 / 255, 153 / 255, 0 / 255, 1
+            font_size: 26
+        Label:
+            markup: True
+            text: '[u][b]Car brand[/b][/u]'
+            color: 38 / 255, 115 / 255, 236 / 255, 1
+            font_size: 30
+        Label:
+            id: car
+            color: 25 / 255, 153 / 255, 0 / 255, 1
+            font_size: 26
+        Label:
+            markup: True
+            text: '[u][b]Recognized numberplate[/b][/u]'
+            color: 38 / 255, 115 / 255, 236 / 255, 1
+            font_size: 30
+        Label:
+            id: recognized
+            color: 25 / 255, 153 / 255, 0 / 255, 1
+            font_size: 26
+        Button:
+            text: 'Open'
+            background_color: 86 / 255, 197 / 255, 255 / 255, 1
+
+    #Right menu
+    BoxLayout:
+        orientation: 'vertical'
+        background_color: 255 / 255, 255 / 255, 255 / 255, 1
+        BoxLayout:
+            size_hint: 1, 0.1
+        
+            Label:
+                markup: True
+                text: '[b]Camera[/b]'
+                font_size: 28
+                color: 25 / 255, 153 / 255, 0 / 255, 1
+                background_color: 255, 255, 255, 1
+            Label:
+            Label:
+                markup: True
+                id: date
+                font_size: 24
+                #color: 0 / 255, 106 / 255, 193 / 255, 1
+        Widget:
+            canvas:
+                Rectangle:
+                    id: video
+                    source: 'save.jpg'
+                    size: self.size
+                    pos: self.pos
